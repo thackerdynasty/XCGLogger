@@ -94,7 +94,7 @@ open class AutoRotatingFileDestination: FileDestination {
             let defaultLogFolderURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("log")
             try? FileManager.default.createDirectory(at: defaultLogFolderURL, withIntermediateDirectories: true)
             return defaultLogFolderURL
-        #elseif os(iOS) || os(tvOS) || os(watchOS)
+        #elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
             let urls = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
             let defaultLogFolderURL = urls[urls.endIndex - 1].appendingPathComponent("log")
             try? FileManager.default.createDirectory(at: defaultLogFolderURL, withIntermediateDirectories: true)
