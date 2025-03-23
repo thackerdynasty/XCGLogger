@@ -9,7 +9,7 @@
 
 #if os(macOS)
     import AppKit
-#elseif os(iOS) || os(tvOS) || os(watchOS)
+#elseif os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
     import UIKit
 #endif
 
